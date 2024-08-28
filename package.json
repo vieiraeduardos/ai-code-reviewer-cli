@@ -1,0 +1,17 @@
+{
+  "name": "ai-code-reviewer-cli",
+  "version": "0.0.1",
+  "description": "CLI for AI Code Reviewer",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "author": "vieiraeduardos",
+  "license": "ISC"
+}
