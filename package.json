@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "CLI for AI Code Reviewer",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.5.1"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/cli.js",
