@@ -3,7 +3,9 @@ import {
     HarmCategory,
     HarmBlockThreshold,
 } from "@google/generative-ai";
-import { error } from "console";
+
+import * as dotenv from "dotenv";
+dotenv.config();
 
 export class GenerativeAI {
     genAI: GoogleGenerativeAI;
