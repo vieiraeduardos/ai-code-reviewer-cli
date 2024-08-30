@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import { exec } from "child_process";
 
-import { run } from "./genai"; 
+import { GenerativeAI } from "./generative-ai"; 
 
 const program = new Command();
 
@@ -25,13 +25,14 @@ program
 program.command("review")
     .description("Review repositories diff and displays suggestions for a better code")
     .action((str, options) => {
-        get_repositories_diff((error, stdout) => {
+        get_repositories_diff(async (error, stdout) => {
             if (error) {
                 console.error("Failed to get repository diff:", error);
                 return;
             }
             if (stdout) {
-                run(stdout);
+                const result = await new GenerativeAI().run(stdout);
+                console.log(result);
             }
         });
     });
